@@ -18,6 +18,8 @@
 		39198B931D99A91C00DC3F2D /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 39198B921D99A91C00DC3F2D /* Movie.m */; };
 		39198B961D99C36100DC3F2D /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39198B951D99C36100DC3F2D /* MovieTableViewCell.m */; };
 		39198B991D9A00E400DC3F2D /* MovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39198B981D9A00E400DC3F2D /* MovieDetailsViewController.m */; };
+		39198B9D1D9B0A9900DC3F2D /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39198B9C1D9B0A9900DC3F2D /* MapView.m */; };
+		39198BA01D9B107800DC3F2D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39198B9F1D9B107800DC3F2D /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +62,9 @@
 		39198B951D99C36100DC3F2D /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
 		39198B971D9A00E400DC3F2D /* MovieDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailsViewController.h; sourceTree = "<group>"; };
 		39198B981D9A00E400DC3F2D /* MovieDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailsViewController.m; sourceTree = "<group>"; };
-		39198B9A1D9A029000DC3F2D /* PosterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterProtocol.h; sourceTree = "<group>"; };
+		39198B9B1D9B0A9900DC3F2D /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		39198B9C1D9B0A9900DC3F2D /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		39198B9F1D9B107800DC3F2D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39198BA01D9B107800DC3F2D /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +100,7 @@
 				39198B741D99A5BB00DC3F2D /* RottenTomatoesTests */,
 				39198B7F1D99A5BB00DC3F2D /* RottenTomatoesUITests */,
 				39198B591D99A5BB00DC3F2D /* Products */,
+				39198B9E1D9B107700DC3F2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,15 +120,15 @@
 				39198B5E1D99A5BB00DC3F2D /* AppDelegate.h */,
 				39198B5F1D99A5BB00DC3F2D /* AppDelegate.m */,
 				39198B641D99A5BB00DC3F2D /* Main.storyboard */,
-				39198B971D9A00E400DC3F2D /* MovieDetailsViewController.h */,
-				39198B981D9A00E400DC3F2D /* MovieDetailsViewController.m */,
-				39198B9A1D9A029000DC3F2D /* PosterProtocol.h */,
 				39198B8E1D99A8E400DC3F2D /* TableViewController.h */,
 				39198B8F1D99A8E400DC3F2D /* TableViewController.m */,
-				39198B911D99A91C00DC3F2D /* Movie.h */,
-				39198B921D99A91C00DC3F2D /* Movie.m */,
 				39198B941D99C36100DC3F2D /* MovieTableViewCell.h */,
 				39198B951D99C36100DC3F2D /* MovieTableViewCell.m */,
+				39198B971D9A00E400DC3F2D /* MovieDetailsViewController.h */,
+				39198B981D9A00E400DC3F2D /* MovieDetailsViewController.m */,
+				39198B9B1D9B0A9900DC3F2D /* MapView.h */,
+				39198B9C1D9B0A9900DC3F2D /* MapView.m */,
+				39198BA11D9B243300DC3F2D /* Model */,
 				39198B671D99A5BB00DC3F2D /* Assets.xcassets */,
 				39198B691D99A5BB00DC3F2D /* LaunchScreen.storyboard */,
 				39198B6C1D99A5BB00DC3F2D /* Info.plist */,
@@ -155,6 +161,23 @@
 				39198B821D99A5BB00DC3F2D /* Info.plist */,
 			);
 			path = RottenTomatoesUITests;
+			sourceTree = "<group>";
+		};
+		39198B9E1D9B107700DC3F2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39198B9F1D9B107800DC3F2D /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39198BA11D9B243300DC3F2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39198B911D99A91C00DC3F2D /* Movie.h */,
+				39198B921D99A91C00DC3F2D /* Movie.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +317,7 @@
 				39198B901D99A8E400DC3F2D /* TableViewController.m in Sources */,
 				39198B931D99A91C00DC3F2D /* Movie.m in Sources */,
 				39198B961D99C36100DC3F2D /* MovieTableViewCell.m in Sources */,
+				39198B9D1D9B0A9900DC3F2D /* MapView.m in Sources */,
 				39198B991D9A00E400DC3F2D /* MovieDetailsViewController.m in Sources */,
 				39198B5D1D99A5BB00DC3F2D /* main.m in Sources */,
 			);

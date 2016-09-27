@@ -9,6 +9,8 @@
 #import "TableViewController.h"
 #import "Movie.h"
 #import "MovieTableViewCell.h"
+#import "MovieDetailsViewController.h"
+
 
 @interface TableViewController ()
 
@@ -17,6 +19,7 @@
 @property NSMutableArray * moviesNotInTheatresArray;
 @property NSString * title;
 @property Movie* aMovie;
+@property MovieTableViewCell *cell;
 
 
 @end
@@ -145,14 +148,42 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MovieTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"movieCell" forIndexPath:indexPath];
+   self.cell = [tableView dequeueReusableCellWithIdentifier:@"movieCell" forIndexPath:indexPath];
     
     
     Movie * aMovie = self.objects[indexPath.row];
     
-    cell.movie = aMovie;
+    self.cell.movie = aMovie;
 
-    return cell;
+    return self.cell;
+}
+
+- (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//[self performSegueWithIdentifier:@"showDetails" sender:self.aMovie.imageStr];
+//}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString: @"showDetails"]) {
+//        MovieDetailsViewController *dest = (MovieDetailsViewController *)[segue destinationViewController];
+        //the sender is what you pass into the previous method
+        //telling segue this is the next details view controller
+        NSIndexPath * selectedItem = self.tableView.indexPathForSelectedRow;
+        MovieTableViewCell * selectedCell = [self.tableView cellForRowAtIndexPath:selectedItem];
+
+        
+
+        MovieDetailsViewController * movieDetails = segue.destinationViewController;
+// made the details view controller the designated view controller
+        // then set the movie details movie to the movie that is in the selected cell by the above code
+        
+        movieDetails.movie = selectedCell.movie;
+
+        
+    }
 }
 
 
@@ -191,14 +222,15 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+//// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//}
+
 
 @end

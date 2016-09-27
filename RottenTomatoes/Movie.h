@@ -24,7 +24,7 @@
 
 - (instancetype) initWithInfo: (NSDictionary *) info;
 
--(BOOL)isInTheatres;
+- (BOOL)isInTheatres;
 
 
 @end

@@ -47,7 +47,7 @@
                                 <connections>
                                     <outlet property="posterImageView" destination="l2j-YF-vRc" id="hWP-Xc-skv"/>
                                     <outlet property="titleLabel" destination="3wr-Yh-4el" id="lmh-bD-lK7"/>
-                                    <segue destination="cJF-CK-VDc" kind="show" id="SRW-vh-uYD"/>
+                                    <segue destination="cJF-CK-VDc" kind="show" identifier="showDetails" id="SRW-vh-uYD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -74,7 +74,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8TH-DO-4Or">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8TH-DO-4Or">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="sGL-qi-B2S"/>
                                 </constraints>
@@ -88,12 +88,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNK-ys-WDa">
+                                <state key="normal" title="Show Theatres"/>
+                                <connections>
+                                    <segue destination="hl7-B3-dsZ" kind="show" identifier="showMap" id="io2-fR-Gqc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="PNK-ys-WDa" firstAttribute="top" secondItem="qpn-aj-dfO" secondAttribute="bottom" constant="49" id="ED3-W1-RRo"/>
                             <constraint firstItem="qpn-aj-dfO" firstAttribute="leading" secondItem="Lz0-UM-TJx" secondAttribute="leadingMargin" constant="10" id="MQR-rL-D4m"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qpn-aj-dfO" secondAttribute="trailing" constant="10" id="OaX-2e-fJf"/>
                             <constraint firstItem="qpn-aj-dfO" firstAttribute="top" secondItem="8TH-DO-4Or" secondAttribute="bottom" constant="8" id="TGG-CJ-c29"/>
+                            <constraint firstItem="PNK-ys-WDa" firstAttribute="centerX" secondItem="Lz0-UM-TJx" secondAttribute="centerX" id="fXZ-hc-g8p"/>
                             <constraint firstItem="8TH-DO-4Or" firstAttribute="top" secondItem="18w-HP-JOa" secondAttribute="bottom" constant="8" symbolic="YES" id="j0P-Vw-K0k"/>
                             <constraint firstItem="8TH-DO-4Or" firstAttribute="leading" secondItem="Lz0-UM-TJx" secondAttribute="leadingMargin" constant="30" id="nlv-rm-Tbp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8TH-DO-4Or" secondAttribute="trailing" constant="30" id="tmK-7F-gP9"/>
@@ -102,11 +110,42 @@
                     <connections>
                         <outlet property="posterImage" destination="8TH-DO-4Or" id="Sf4-dg-J8a"/>
                         <outlet property="reviewText" destination="qpn-aj-dfO" id="zfj-SO-YSt"/>
+                        <outlet property="showTheatresButton" destination="PNK-ys-WDa" id="bFU-Ca-ifH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJj-S9-VjP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1647.2" y="105.69715142428787"/>
+        </scene>
+        <!--Map View-->
+        <scene sceneID="wxg-Hg-C06">
+            <objects>
+                <viewController id="hl7-B3-dsZ" customClass="MapView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XyL-YF-djt"/>
+                        <viewControllerLayoutGuide type="bottom" id="hUV-gD-pJQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FcK-Xi-Rcl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zWQ-XH-enE"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zWQ-XH-enE" firstAttribute="trailing" secondItem="FcK-Xi-Rcl" secondAttribute="trailingMargin" id="Hkv-T9-adT"/>
+                            <constraint firstItem="zWQ-XH-enE" firstAttribute="top" secondItem="XyL-YF-djt" secondAttribute="bottom" constant="8" symbolic="YES" id="Qag-XP-d3g"/>
+                            <constraint firstItem="hUV-gD-pJQ" firstAttribute="top" secondItem="zWQ-XH-enE" secondAttribute="bottom" constant="8" symbolic="YES" id="XGm-xh-riA"/>
+                            <constraint firstItem="zWQ-XH-enE" firstAttribute="leading" secondItem="FcK-Xi-Rcl" secondAttribute="leadingMargin" id="fsD-Q7-SA1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="zWQ-XH-enE" id="cOe-UC-WSc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcc-9y-oYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2370.4000000000001" y="112.89355322338831"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V8j-fa-l0u">

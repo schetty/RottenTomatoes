@@ -7,8 +7,12 @@
 //
 
 #import "MovieDetailsViewController.h"
+#import "Movie.h"
 
 @interface MovieDetailsViewController ()
+
+
+
 
 @end
 
@@ -16,22 +20,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+    
+    NSURL* url = [NSURL URLWithString:self.movie.imageStr];
+    
+    NSURLSession * session = [NSURLSession sharedSession];
+    [[session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSData* getData = [NSData dataWithContentsOfURL:location];
+        UIImage *downloadedImage = [UIImage imageWithData:getData];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.posterImage.image = downloadedImage;
+        });
+        
+    }] resume];
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void) setMovie:(Movie *)movie{
+    
+    _movie = movie;
 }
-*/
 
 @end
