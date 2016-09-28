@@ -7,8 +7,20 @@
 //
 
 #import "MapView.h"
+#import "LocationManager.h"
+#import "AppDelegate.h"
 
-@interface MapView ()
+#define zoominMapArea 2000
+NSString * const LLTHEATER_API_ENDPOINT = @"http://lighthouse-movie-showtimes.herokuapp.com/theatres.json";
+
+
+@interface MapView () <MKMapViewDelegate, SharedLocationDelegate>
+
+//@property LocationManager* locationManager;
+@property (nonatomic) CLLocationManager* locationManager;
+@property BOOL isSetUp;
+@property NSArray *theatresArray;
+
 
 @end
 
@@ -17,19 +29,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CLLocation *initalLocation = [[CLLocation alloc]initWithLatitude:49.1458 longitude:123.0709];
+//    LocationManager *locationManager = [[LocationManager alloc] init];
+//    locationManager.geocoder = [[CLGeocoder alloc] init];
+    _locationManager = [CLLocationManager new];
+    [_locationManager requestWhenInUseAuthorization];
+    [_locationManager startUpdatingLocation];
+    self.isSetUp = NO;
+  
+//    self.locationManager = [LocationManager sharedManager];
+    _locationManager.delegate = self;
+//    [self.locationManager startLocationMonitoring];
+    
+    self.mapView.showsUserLocation = YES;
+    self.mapView.delegate = self;
+    
+    
 }
 
+//
+//-(void) passCurrentLocation:(CLLocation*) currentLocation {
+//    CLLocationCoordinate2D zoomLocation = CLLocationCoordinate2DMake(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude);
+//    
+//    MKCoordinateRegion adjustedRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, zoominMapArea, zoominMapArea);
+//    
+//    [_mapView setRegion:adjustedRegion animated:YES];
+//    
+//    
+//    [FoursquareManager responseFrom4sq:currentLocation categoryId:@"4d4b7105d754a06377d81259" limit:@"10" block:^(NSArray *locationsArray, NSError *error) {
+//    
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [_mapView addAnnotations:locationsArray];
+//        });
+//        
+//    }];
+//}
 
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

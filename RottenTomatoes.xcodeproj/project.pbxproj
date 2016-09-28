@@ -20,6 +20,8 @@
 		39198B991D9A00E400DC3F2D /* MovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39198B981D9A00E400DC3F2D /* MovieDetailsViewController.m */; };
 		39198B9D1D9B0A9900DC3F2D /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39198B9C1D9B0A9900DC3F2D /* MapView.m */; };
 		39198BA01D9B107800DC3F2D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39198B9F1D9B107800DC3F2D /* MapKit.framework */; };
+		39198BA41D9B331A00DC3F2D /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 39198BA31D9B331A00DC3F2D /* LocationManager.m */; };
+		39198BA71D9B37CF00DC3F2D /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = 39198BA61D9B37CF00DC3F2D /* Theatre.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		39198B9B1D9B0A9900DC3F2D /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
 		39198B9C1D9B0A9900DC3F2D /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
 		39198B9F1D9B107800DC3F2D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		39198BA21D9B331A00DC3F2D /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		39198BA31D9B331A00DC3F2D /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		39198BA51D9B37CF00DC3F2D /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theatre.h; sourceTree = "<group>"; };
+		39198BA61D9B37CF00DC3F2D /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theatre.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,8 +180,12 @@
 		39198BA11D9B243300DC3F2D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				39198BA21D9B331A00DC3F2D /* LocationManager.h */,
+				39198BA31D9B331A00DC3F2D /* LocationManager.m */,
 				39198B911D99A91C00DC3F2D /* Movie.h */,
 				39198B921D99A91C00DC3F2D /* Movie.m */,
+				39198BA51D9B37CF00DC3F2D /* Theatre.h */,
+				39198BA61D9B37CF00DC3F2D /* Theatre.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -313,11 +323,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39198BA41D9B331A00DC3F2D /* LocationManager.m in Sources */,
 				39198B601D99A5BB00DC3F2D /* AppDelegate.m in Sources */,
 				39198B901D99A8E400DC3F2D /* TableViewController.m in Sources */,
 				39198B931D99A91C00DC3F2D /* Movie.m in Sources */,
 				39198B961D99C36100DC3F2D /* MovieTableViewCell.m in Sources */,
 				39198B9D1D9B0A9900DC3F2D /* MapView.m in Sources */,
+				39198BA71D9B37CF00DC3F2D /* Theatre.m in Sources */,
 				39198B991D9A00E400DC3F2D /* MovieDetailsViewController.m in Sources */,
 				39198B5D1D99A5BB00DC3F2D /* main.m in Sources */,
 			);

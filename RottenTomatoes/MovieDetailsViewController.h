@@ -20,5 +20,6 @@
 @property (nonatomic) Movie* movie;
 
 
+-(void) getReviews;
 
 @end
