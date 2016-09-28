@@ -10,8 +10,8 @@
 #import "LocationManager.h"
 #import "AppDelegate.h"
 
-#define zoominMapArea 2000
-NSString * const LLTHEATER_API_ENDPOINT = @"http://lighthouse-movie-showtimes.herokuapp.com/theatres.json";
+static const int zoominMapArea = 200;
+static NSString * const LLTHEATER_API_ENDPOINT = @"http://lighthouse-movie-showtimes.herokuapp.com/theatres.json";
 
 
 @interface MapView () <MKMapViewDelegate, SharedLocationDelegate>
@@ -25,6 +25,8 @@ NSString * const LLTHEATER_API_ENDPOINT = @"http://lighthouse-movie-showtimes.he
 @end
 
 @implementation MapView
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

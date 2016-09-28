@@ -20,6 +20,7 @@
         _imageStr = info[@"posters"][@"original"];
         _movieSynopsis = info[@"synopsis"];
         _movieReviews = info[@"links"][@"reviews"];
+        _movieID = info[@"id"];
         NSLog(@" HELLO %@", info);
         
     }

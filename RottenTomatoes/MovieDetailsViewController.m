@@ -38,6 +38,7 @@
         
     }] resume];
     
+    self.synopsisText.text = self.movie.movieSynopsis;
     
     [self getReviews];
 
@@ -51,7 +52,8 @@
 }
 
 -(void) getReviews {
-    NSURL* reviewsURL = [NSURL URLWithString:self.movie.movieReviews];
+    NSString *apiURL = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movies/%@/reviews.json?apikey=c9zzxwtuc3q2tftqata3k59w", self.movie.movieID];
+    NSURL* reviewsURL = [NSURL URLWithString:apiURL];
     NSURLSession *downloadReviews = [NSURLSession sharedSession];
     //strings get data task
     [[downloadReviews dataTaskWithURL:reviewsURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -60,7 +62,7 @@
         
         NSMutableString *listedReviews = [[NSMutableString alloc] init];
         for (NSDictionary * dict in reviewsDict) {
-            NSString * critic = [dict objectForKey:@"ctitic"];
+            NSString * critic = [dict objectForKey:@"critic"];
             NSString* publication = [dict objectForKey:@"publication"];
             NSString* impression = [dict objectForKey:@"freshness"];
             NSString* quote = [dict objectForKey:@"quote"];

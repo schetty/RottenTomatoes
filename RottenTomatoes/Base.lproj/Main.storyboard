@@ -74,15 +74,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8TH-DO-4Or">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8TH-DO-4Or">
+                                <frame key="frameInset" minX="16" minY="72" width="170" height="214"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="270" id="sGL-qi-B2S"/>
+                                    <constraint firstAttribute="height" constant="184" id="sGL-qi-B2S"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qpn-aj-dfO">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="3qT-8U-ERF"/>
+                                    <constraint firstAttribute="height" constant="289" id="3qT-8U-ERF"/>
                                 </constraints>
                                 <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -94,23 +95,32 @@
                                     <segue destination="hl7-B3-dsZ" kind="show" identifier="showMap" id="io2-fR-Gqc"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zu8-QU-xE3">
+                                <frame key="frameInset" minX="200" minY="72" width="159" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PNK-ys-WDa" firstAttribute="top" secondItem="qpn-aj-dfO" secondAttribute="bottom" constant="49" id="ED3-W1-RRo"/>
+                            <constraint firstItem="PNK-ys-WDa" firstAttribute="top" secondItem="qpn-aj-dfO" secondAttribute="bottom" constant="1" id="ED3-W1-RRo"/>
                             <constraint firstItem="qpn-aj-dfO" firstAttribute="leading" secondItem="Lz0-UM-TJx" secondAttribute="leadingMargin" constant="10" id="MQR-rL-D4m"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qpn-aj-dfO" secondAttribute="trailing" constant="10" id="OaX-2e-fJf"/>
-                            <constraint firstItem="qpn-aj-dfO" firstAttribute="top" secondItem="8TH-DO-4Or" secondAttribute="bottom" constant="8" id="TGG-CJ-c29"/>
+                            <constraint firstItem="qpn-aj-dfO" firstAttribute="top" secondItem="8TH-DO-4Or" secondAttribute="bottom" constant="64" id="TGG-CJ-c29"/>
                             <constraint firstItem="PNK-ys-WDa" firstAttribute="centerX" secondItem="Lz0-UM-TJx" secondAttribute="centerX" id="fXZ-hc-g8p"/>
                             <constraint firstItem="8TH-DO-4Or" firstAttribute="top" secondItem="18w-HP-JOa" secondAttribute="bottom" constant="8" symbolic="YES" id="j0P-Vw-K0k"/>
-                            <constraint firstItem="8TH-DO-4Or" firstAttribute="leading" secondItem="Lz0-UM-TJx" secondAttribute="leadingMargin" constant="30" id="nlv-rm-Tbp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8TH-DO-4Or" secondAttribute="trailing" constant="30" id="tmK-7F-gP9"/>
+                            <constraint firstItem="8TH-DO-4Or" firstAttribute="leading" secondItem="Lz0-UM-TJx" secondAttribute="leadingMargin" id="nlv-rm-Tbp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8TH-DO-4Or" secondAttribute="trailing" constant="173" id="tmK-7F-gP9"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="posterImage" destination="8TH-DO-4Or" id="Sf4-dg-J8a"/>
                         <outlet property="reviewText" destination="qpn-aj-dfO" id="zfj-SO-YSt"/>
                         <outlet property="showTheatresButton" destination="PNK-ys-WDa" id="bFU-Ca-ifH"/>
+                        <outlet property="synopsisText" destination="zu8-QU-xE3" id="sES-WK-wWE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJj-S9-VjP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -133,10 +143,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zWQ-XH-enE" firstAttribute="trailing" secondItem="FcK-Xi-Rcl" secondAttribute="trailingMargin" id="Hkv-T9-adT"/>
-                            <constraint firstItem="zWQ-XH-enE" firstAttribute="top" secondItem="XyL-YF-djt" secondAttribute="bottom" constant="8" symbolic="YES" id="Qag-XP-d3g"/>
-                            <constraint firstItem="hUV-gD-pJQ" firstAttribute="top" secondItem="zWQ-XH-enE" secondAttribute="bottom" constant="8" symbolic="YES" id="XGm-xh-riA"/>
-                            <constraint firstItem="zWQ-XH-enE" firstAttribute="leading" secondItem="FcK-Xi-Rcl" secondAttribute="leadingMargin" id="fsD-Q7-SA1"/>
+                            <constraint firstAttribute="trailing" secondItem="zWQ-XH-enE" secondAttribute="trailing" id="1go-eF-s6W"/>
+                            <constraint firstItem="hUV-gD-pJQ" firstAttribute="top" secondItem="zWQ-XH-enE" secondAttribute="bottom" id="Uk1-im-KzS"/>
+                            <constraint firstItem="zWQ-XH-enE" firstAttribute="top" secondItem="XyL-YF-djt" secondAttribute="bottom" id="ifX-m6-J1n"/>
+                            <constraint firstItem="zWQ-XH-enE" firstAttribute="leading" secondItem="FcK-Xi-Rcl" secondAttribute="leading" id="ir8-LA-fTj"/>
                         </constraints>
                     </view>
                     <connections>

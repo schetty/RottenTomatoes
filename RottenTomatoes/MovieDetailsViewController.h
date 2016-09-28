@@ -17,6 +17,9 @@
 @property (strong, nonatomic) IBOutlet UITextView *reviewText;
 @property (strong, nonatomic) IBOutlet UIButton *showTheatresButton;
 
+
+@property (strong, nonatomic) IBOutlet UITextView *synopsisText;
+
 @property (nonatomic) Movie* movie;
 
 

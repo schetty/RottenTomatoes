@@ -16,6 +16,7 @@
 @property NSString *imageStr;
 @property NSString *movieSynopsis;
 @property NSString *movieReviews;
+@property NSString *movieID;
 
 
 
