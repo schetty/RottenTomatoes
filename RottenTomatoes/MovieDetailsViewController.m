@@ -8,6 +8,7 @@
 
 #import "MovieDetailsViewController.h"
 #import "Movie.h"
+#import "MapView.h"
 
 //set constant for api json
 
@@ -49,6 +50,16 @@
 -(void) setMovie:(Movie *)movie{
     
     _movie = movie;
+}
+
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showMap"]) {
+      MapView *destinationViewController = (MapView *) segue.destinationViewController;
+        ///pass objects not properties
+        //pass box not donuts
+        destinationViewController.movie = self.movie;
+    }
 }
 
 -(void) getReviews {

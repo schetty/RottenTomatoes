@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DC6799AD7C048BD807B2E6A816209FA5D5ABF401",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "38A64F5FA7AA5CD3EE237DF2C7AB68B965EE2FDF" : 9223372036854775807,
+    "DC6799AD7C048BD807B2E6A816209FA5D5ABF401" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "26D14687-DC3B-4B99-84CD-56B053C0551F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "38A64F5FA7AA5CD3EE237DF2C7AB68B965EE2FDF" : "",
+    "DC6799AD7C048BD807B2E6A816209FA5D5ABF401" : "RottenTomatoes\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RottenTomatoes",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RottenTomatoes.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/schetty\/every_do_it_again.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "38A64F5FA7AA5CD3EE237DF2C7AB68B965EE2FDF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/schetty\/RottenTomatoes.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DC6799AD7C048BD807B2E6A816209FA5D5ABF401"
+    }
+  ]
+}

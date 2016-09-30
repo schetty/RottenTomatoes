@@ -22,6 +22,7 @@
 		39198BA01D9B107800DC3F2D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39198B9F1D9B107800DC3F2D /* MapKit.framework */; };
 		39198BA41D9B331A00DC3F2D /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 39198BA31D9B331A00DC3F2D /* LocationManager.m */; };
 		39198BA71D9B37CF00DC3F2D /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = 39198BA61D9B37CF00DC3F2D /* Theatre.m */; };
+		39E0FBF41D9EDE0500CA2E4E /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FBF31D9EDE0500CA2E4E /* Annotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		39198BA31D9B331A00DC3F2D /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		39198BA51D9B37CF00DC3F2D /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theatre.h; sourceTree = "<group>"; };
 		39198BA61D9B37CF00DC3F2D /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theatre.m; sourceTree = "<group>"; };
+		39E0FBF21D9EDE0500CA2E4E /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		39E0FBF31D9EDE0500CA2E4E /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 				39198B981D9A00E400DC3F2D /* MovieDetailsViewController.m */,
 				39198B9B1D9B0A9900DC3F2D /* MapView.h */,
 				39198B9C1D9B0A9900DC3F2D /* MapView.m */,
+				39E0FBF21D9EDE0500CA2E4E /* Annotation.h */,
+				39E0FBF31D9EDE0500CA2E4E /* Annotation.m */,
 				39198BA11D9B243300DC3F2D /* Model */,
 				39198B671D99A5BB00DC3F2D /* Assets.xcassets */,
 				39198B691D99A5BB00DC3F2D /* LaunchScreen.storyboard */,
@@ -323,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E0FBF41D9EDE0500CA2E4E /* Annotation.m in Sources */,
 				39198BA41D9B331A00DC3F2D /* LocationManager.m in Sources */,
 				39198B601D99A5BB00DC3F2D /* AppDelegate.m in Sources */,
 				39198B901D99A8E400DC3F2D /* TableViewController.m in Sources */,
@@ -561,6 +567,7 @@
 				39198B871D99A5BB00DC3F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39198B881D99A5BB00DC3F2D /* Build configuration list for PBXNativeTarget "RottenTomatoesTests" */ = {
 			isa = XCConfigurationList;
@@ -569,6 +576,7 @@
 				39198B8A1D99A5BB00DC3F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39198B8B1D99A5BB00DC3F2D /* Build configuration list for PBXNativeTarget "RottenTomatoesUITests" */ = {
 			isa = XCConfigurationList;
@@ -577,6 +585,7 @@
 				39198B8D1D99A5BB00DC3F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

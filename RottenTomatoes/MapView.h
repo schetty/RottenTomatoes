@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 @import CoreLocation;
 @import MapKit;
+#import "Movie.h"
 
 @interface MapView : UIViewController
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
-
+@property (nonatomic) Movie * movie;
 
 @end
